@@ -11,11 +11,14 @@ namespace MigracionAzureTablesXML
         {
             //COMENZAMOS RECUPERANDO EL DOCUMENTO XML INCRUSTADO
             //PARA ELLO, DEBEMOS ACCEDER AL ASSEMBLY Y NOS 
-            //DEVOLVERA UN Strem
+            //DEVOLVERA UN Stream
             //EL DOCUMENTO TENDRA EL namespace DEL NOMBRE DE NUESTRO
             //PROYECTO Y EL NOMBRE DEL FICHERO
             //MigracionAzureTablesXML.alumnos.xml
-            //string 
+            string assemblypath = "MigracionAzureTablesXML.alumnos.xml";
+            Stream stream =
+                this.GetType().Assembly.GetManifestResourceStream(assemblypath);
+
         }
     }
 }
